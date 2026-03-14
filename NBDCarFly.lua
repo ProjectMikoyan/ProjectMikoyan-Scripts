@@ -174,7 +174,7 @@ KeyList.Size = UDim2.new(0.9, 0, 0, 70)
 
 KeyList.Font = Enum.Font.SourceSans
 
-KeyList.Text = "[U] Toggle Fly\n[V] Hide Menu\n[R] Boost Forward\n[F] Boost Backward"
+KeyList.Text = "[U] Toggle Fly\n[V] Hide Menu\n[W] Fly Forward\n[S] Fly Backward"
 
 KeyList.TextColor3 = Color3.fromRGB(255, 255, 255)
 
