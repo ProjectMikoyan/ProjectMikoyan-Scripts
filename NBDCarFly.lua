@@ -130,7 +130,7 @@ SpeedInfo.Size = UDim2.new(1, 0, 0, 20)
 
 SpeedInfo.Font = Enum.Font.SourceSans
 
-SpeedInfo.Text = "Changing this changes speed"
+SpeedInfo.Text = "Change The Number To Change Speed"
 
 SpeedInfo.TextColor3 = Color3.fromRGB(255, 140, 0)
 
@@ -322,9 +322,9 @@ UIS.InputBegan:Connect(function(input, gpe)
 
     if Stat2.Text == "STATUS: ON" then
 
-        if input.KeyCode == Enum.KeyCode.R then movePlayer(1)
+        if input.KeyCode == Enum.KeyCode.W then movePlayer(1)
 
-        elseif input.KeyCode == Enum.KeyCode.F then movePlayer(-1) end
+        elseif input.KeyCode == Enum.KeyCode.S then movePlayer(-1) end
 
     end
 
