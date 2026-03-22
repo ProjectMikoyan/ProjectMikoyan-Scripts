@@ -90,7 +90,7 @@ KeyList.BackgroundTransparency = 1
 KeyList.Position = UDim2.new(0, 15, 0, 120)
 KeyList.Size = UDim2.new(0.9, 0, 0, 80)
 KeyList.Font = Enum.Font.GothamSemibold
-KeyList.Text = "[U] Toggle Fly\n[V] Hide Menu\n[B] Toggle Move Mode\n[W/S] Move Forward/Back"
+KeyList.Text = "[U] Toggle Fly\n[V] Hide Menu\n[B] Toggle Move Mode\n[R/F] Move Forward/Back"
 KeyList.TextColor3 = Color3.fromRGB(240, 240, 240)
 KeyList.TextSize = 14
 KeyList.TextXAlignment = Enum.TextXAlignment.Left
@@ -238,9 +238,9 @@ UIS.InputBegan:Connect(function(input, gpe)
     end
     
     if FlyStatus.Text == "FLY: ON" then
-        if input.KeyCode == Enum.KeyCode.W then 
+        if input.KeyCode == Enum.KeyCode.R then 
             movePlayer(1)
-        elseif input.KeyCode == Enum.KeyCode.S then 
+        elseif input.KeyCode == Enum.KeyCode.F then 
             movePlayer(-1) 
         end
     end
