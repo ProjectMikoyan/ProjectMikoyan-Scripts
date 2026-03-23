@@ -90,7 +90,7 @@ KeyList.BackgroundTransparency = 1
 KeyList.Position = UDim2.new(0, 15, 0, 120)
 KeyList.Size = UDim2.new(0.9, 0, 0, 80)
 KeyList.Font = Enum.Font.GothamSemibold
-KeyList.Text = "[U] Toggle Fly\n[V] Hide Menu\n[B] Toggle Move Mode\n[R/F] Move Forward/Back"
+KeyList.Text = "[U] Toggle Fly\n[V] Hide Menu\n[W/S] Move Forward/Back"
 KeyList.TextColor3 = Color3.fromRGB(240, 240, 240)
 KeyList.TextSize = 14
 KeyList.TextXAlignment = Enum.TextXAlignment.Left
@@ -108,19 +108,6 @@ FlyStatus.Font = Enum.Font.GothamBold
 FlyStatus.Text = "FLY: OFF"
 FlyStatus.TextColor3 = Color3.fromRGB(255, 60, 60) -- Red
 FlyStatus.TextSize = 15
-
--- Mode Status
-local ModeStatus = Instance.new("TextLabel")
-ModeStatus.Name = "ModeStatus"
-ModeStatus.Parent = MainFrame
-ModeStatus.BackgroundTransparency = 1
-ModeStatus.AnchorPoint = Vector2.new(0.5, 0)
-ModeStatus.Position = UDim2.new(0.5, 0, 0, 245)
-ModeStatus.Size = UDim2.new(1, 0, 0, 20)
-ModeStatus.Font = Enum.Font.GothamBold
-ModeStatus.Text = "MODE: TAP TO MOVE"
-ModeStatus.TextColor3 = Color3.fromRGB(255, 140, 0) -- Orange
-ModeStatus.TextSize = 15
 
 --- ANIMATION & DRAGGING LOGIC ---
 
@@ -238,9 +225,9 @@ UIS.InputBegan:Connect(function(input, gpe)
     end
     
     if FlyStatus.Text == "FLY: ON" then
-        if input.KeyCode == Enum.KeyCode.R then 
+        if input.KeyCode == Enum.KeyCode.W then 
             movePlayer(1)
-        elseif input.KeyCode == Enum.KeyCode.F then 
+        elseif input.KeyCode == Enum.KeyCode.S then 
             movePlayer(-1) 
         end
     end
