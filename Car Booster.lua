@@ -160,7 +160,7 @@ Close.MouseButton1Click:Connect(function()
     local closeTween = TweenService:Create(MainFrame, closeInfo, {Size = UDim2.new(0, 0, 0, 0)})
     closeTween:Play()
     closeTween.Completed:Wait()
-    Flymguiv2:Destroy()
+    NBDCarFly:Destroy()
 end)
 
 --- BOOST LOGIC ---
@@ -211,7 +211,7 @@ local function toggleBoost()
             end
         end)
     else
-        FlyStatus.Text = "BOOST: OFF"
+        FlyStatus.Text = "Disabled like MRSIGMA_BOY777"
         FlyStatus.TextColor3 = Color3.fromRGB(255, 60, 60) -- Red
         
         if boostConnection then boostConnection:Disconnect() end
