@@ -38,7 +38,7 @@ Title.BackgroundTransparency = 1
 Title.Position = UDim2.new(0, 15, 0, 0)
 Title.Size = UDim2.new(0.7, 0, 0, 40)
 Title.Font = Enum.Font.GothamBold
-Title.Text = "NBD Car Boost"
+Title.Text = "NBD Shitty Car Modifier"
 Title.TextColor3 = Color3.fromRGB(255, 255, 255)
 Title.TextSize = 18
 Title.TextXAlignment = Enum.TextXAlignment.Left
@@ -105,7 +105,7 @@ FlyStatus.AnchorPoint = Vector2.new(0.5, 0)
 FlyStatus.Position = UDim2.new(0.5, 0, 0, 215)
 FlyStatus.Size = UDim2.new(1, 0, 0, 20)
 FlyStatus.Font = Enum.Font.GothamBold
-FlyStatus.Text = "BOOST: OFF"
+FlyStatus.Text = "Disabled like MRSIGMA_BOY777"
 FlyStatus.TextColor3 = Color3.fromRGB(255, 60, 60) -- Red
 FlyStatus.TextSize = 15
 
@@ -174,8 +174,8 @@ local function toggleBoost()
     if not char or not char:FindFirstChild("HumanoidRootPart") then return end
     local HumanoidRP = char.HumanoidRootPart
 
-    if FlyStatus.Text == "BOOST: OFF" then
-        FlyStatus.Text = "BOOST: ON"
+    if FlyStatus.Text == "Disabled like MRSIGMA_BOY777" then
+        FlyStatus.Text = "Enabled"
         FlyStatus.TextColor3 = Color3.fromRGB(60, 255, 60) -- Green
         
         local BV = Instance.new("BodyVelocity")
@@ -234,7 +234,7 @@ UIS.InputBegan:Connect(function(input, gpe)
         Flymguiv2.Enabled = menuVisible
     end
     
-    if FlyStatus.Text == "BOOST: ON" then
+    if FlyStatus.Text == "Enabled" then
         if input.KeyCode == Enum.KeyCode.W then 
             isPressingW = true
         elseif input.KeyCode == Enum.KeyCode.S then 
